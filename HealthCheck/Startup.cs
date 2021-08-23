@@ -10,6 +10,7 @@ namespace HealthCheck
 {
     public class Startup
     {
+        // public static readonly string ClientApp = "HealthCheck";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,6 +26,7 @@ namespace HealthCheck
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
+                // configuration.RootPath = string.Format("{0}/dist", ClientApp);
             });
         }
 
@@ -64,6 +66,7 @@ namespace HealthCheck
                 // see https://go.microsoft.com/fwlink/?linkid=864501
 
                 spa.Options.SourcePath = "ClientApp";
+                // spa.Options.SourcePath = ClientApp;
 
                 if (env.IsDevelopment())
                 {
