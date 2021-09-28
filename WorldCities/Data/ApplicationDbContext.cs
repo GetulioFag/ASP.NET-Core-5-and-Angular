@@ -11,6 +11,11 @@ namespace WorldCitites.Data
         public ApplicationDbContext(DbContextOptions options)
         {}
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            
+        }
+
         public DbSet<City> Cities {get; set;}
         public DbSet<Country> Countries {get; set;}
     }
